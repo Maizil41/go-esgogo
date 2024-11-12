@@ -1,3 +1,3 @@
 module go-esgogo
 
-go 1.21.13
+go 1.23
