@@ -1,19 +1,16 @@
 package main
 
 import (
-	"github.com/gin-gonic/gin"
-	"net/http"
+	"fmt"
+	"time"
 )
 
 func main() {
-	router := gin.Default()
-
-	router.Static("/static", "./static")
-
-	router.LoadHTMLGlob("templates/*")
-	router.GET("/", func(c *gin.Context) {
-		c.HTML(http.StatusOK, "index.html", nil)
-	})
-
-	router.Run(":8080")
+	for {
+		fmt.Print("\rHello, World!")
+		time.Sleep(1 * time.Second)
+		
+		fmt.Print("\r                ")
+		time.Sleep(1 * time.Second)
+	}
 }
